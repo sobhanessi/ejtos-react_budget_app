@@ -11,12 +11,10 @@ const Budget = () => {
     const changeBudget = (budget) => {
         if (budget > 20000)
             alert(
-                "The value cannot exceed remaining funds" +
-                    { currency } +
-                    { remaining }
+                `The value cannot exceed remaining funds ${currency}${remaining}`
             );
         else if (budget < totalExpenses)
-            alert("The value cannot be lower than the spending");
+            alert("You cannot reduce the budger value lower than the spending");
         else {
             const expense = {
                 cost: parseInt(budget),
